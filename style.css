@@ -1,0 +1,117 @@
+/* Google Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --bg-color: #f9f9fb;
+  --text-color: #333;
+  --primary-color: #2d89ef;
+  --secondary-color: #666;
+  --card-bg: #fff;
+  --border-radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+header .profile-pic {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: var(--shadow);
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin: 0.2rem 0;
+}
+
+header h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 0.3rem 0;
+}
+
+header .tagline {
+  font-size: 0.95rem;
+  color: var(--secondary-color);
+}
+
+/* Sections */
+section {
+  background: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+section h3 {
+  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 0.4rem 0;
+}
+
+/* Contact Links */
+.contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact a:hover {
+  color: #1453a3;
+}
+
+/* Experience Cards */
+.job h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.job .date {
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--secondary-color);
+  margin-top: 2rem;
+}
