@@ -15,7 +15,12 @@
       <h2>Aspiring IT CyberSecurity/Architect & Developer</h2>
       <p class="tagline">"Designing technology that is both secure and impactful."</p>
     </header>
-    <button onclick="darkmode()">Click for Dark Mode</button>
+    
+    <!-- Dark Mode Switch -->
+    <label class="switch">
+      <input type="checkbox" id="darkModeToggle">
+      <span class="slider round"></span>
+    </label>
 
     <!-- Contact Info -->
     <section class="contact">
@@ -87,6 +92,13 @@
       <p>© 2025 Vegard. Built with ❤️ using GitHub Pages.</p>
     </footer>
   </div>
-  <script href="script.js"></script>
+  <script>
+  const toggle = document.getElementById('darkModeToggle');
+
+  toggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode', toggle.checked);
+  });
+  </script>
+
 </body>
 </html>
