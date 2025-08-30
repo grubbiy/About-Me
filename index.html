@@ -5,6 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vegard | About Me</title>
   <link rel="stylesheet" href="style.css"/>
+  <style>
+  body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+</style>
 </head>
 <body>
   <div class="container">
@@ -16,7 +29,7 @@
       <p class="tagline">"Designing technology that is both secure and impactful."</p>
 
       <!-- Dark Mode Toggle -->
-      <button id="theme-toggle">🌙 Dark Mode</button>
+      <button onclick="DarkMode()">Toggle dark mode</button>
     </header>
 
     <!-- Contact Info -->
