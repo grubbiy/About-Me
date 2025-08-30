@@ -1,22 +1,16 @@
-/* Google Font Import */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
-
-:root {
-  --bg-color: #f9f9fb;
-  --text-color: #333;
-  --primary-color: #2d89ef;
-  --secondary-color: #666;
-  --card-bg: #fff;
-  --border-radius: 12px;
-  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+/* Basic Reset & Fonts */
+body, h1, h2, h3, h4, p, ul, li {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Inter', sans-serif;
-  background-color: var(--bg-color);
-  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9fb;
+  color: #333333;
   line-height: 1.6;
+  transition: background-color 0.4s, color 0.4s;
 }
 
 /* Container */
@@ -37,7 +31,7 @@ header .profile-pic {
   height: 120px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: var(--shadow);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
   margin-bottom: 1rem;
 }
 
@@ -49,73 +43,15 @@ header h1 {
 header h2 {
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--primary-color);
+  color: #2d89ef;
   margin: 0.3rem 0;
 }
 
 header .tagline {
   font-size: 0.95rem;
-  color: var(--secondary-color);
-}
-
-/* Sections */
-section {
-  background: var(--card-bg);
-  padding: 1.5rem;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
-  margin-bottom: 1.5rem;
-}
-
-section h3 {
-  border-bottom: 2px solid var(--primary-color);
-  padding-bottom: 0.4rem;
+  color: #666666;
   margin-bottom: 1rem;
-  font-size: 1.2rem;
 }
-
-/* Lists */
-ul {
-  list-style: none;
-  padding: 0;
-}
-
-ul li {
-  margin: 0.4rem 0;
-}
-
-/* Contact Links */
-.contact a {
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: color 0.2s ease;
-}
-
-.contact a:hover {
-  color: #1453a3;
-}
-
-/* Experience Cards */
-.job h4 {
-  margin: 0;
-  font-weight: 600;
-}
-
-.job .date {
-  font-size: 0.9rem;
-  color: var(--secondary-color);
-  display: block;
-  margin-bottom: 0.5rem;
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--secondary-color);
-  margin-top: 2rem;
-}
-
 
 /* Toggle Switch */
 .switch {
@@ -123,10 +59,10 @@ footer {
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
-.switch input { 
+.switch input {
   opacity: 0;
   width: 0;
   height: 0;
@@ -137,7 +73,7 @@ footer {
   cursor: pointer;
   top: 0; left: 0; right: 0; bottom: 0;
   background-color: #ccc;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 .slider:before {
@@ -148,7 +84,7 @@ footer {
   left: 4px;
   bottom: 4px;
   background-color: white;
-  transition: .4s;
+  transition: 0.4s;
 }
 
 input:checked + .slider {
@@ -159,11 +95,99 @@ input:checked + .slider:before {
   transform: translateX(26px);
 }
 
-/* Rounded sliders */
+/* Rounded slider */
 .slider.round {
   border-radius: 34px;
 }
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+/* Sections */
+section {
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+}
+
+section h3 {
+  border-bottom: 2px solid #2d89ef;
+  padding-bottom: 0.4rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+/* Lists */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin: 0.4rem 0;
+}
+
+/* Contact Links */
+.contact a {
+  color: #2d89ef;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact a:hover {
+  color: #1453a3;
+}
+
+/* Experience */
+.job h4 {
+  margin: 0;
+  font-weight: 600;
+}
+
+.job .date {
+  font-size: 0.9rem;
+  color: #666666;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #666666;
+  margin-top: 2rem;
+}
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #111111;
+  color: #f1f1f1;
+}
+
+body.dark-mode section {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode h2 {
+  color: #64a0ff;
+}
+
+body.dark-mode .contact a {
+  color: #64a0ff;
+}
+
+body.dark-mode .contact a:hover {
+  color: #90bfff;
+}
+
+body.dark-mode .job .date {
+  color: #bbbbbb;
+}
+
+body.dark-mode footer {
+  color: #bbbbbb;
 }
